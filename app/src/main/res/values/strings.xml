@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">TutorialFragments</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="names">
+        <item>Kant and the Sublime</item>
+        <item>Sigmund Freud’s Theorie</item>
+        <item>Kant and Metaphysics (Summary)</item>
+        <item>Leibniz’s Monadology Summary</item>
+        <item>Nietzsche: God is dead (Explanation)</item>
+        <item>Hegel’s Philosophy Summary</item>
+        <item>Kierkegaard’s Philosophy Summary</item>
+        <item>Heidegger the Being-for-Death</item>
+        <item>Brentano’s intentionnality</item>
+        <item>Religion is the opium of the people – Marx</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>The sublime is at the heart of Kant’s aesthetic philosophy. Kant defines sublime as that is beyond all comparison (that is absolutely) great, either mathematically in terms of limitless magnitude, or dynamically in terms of limitless power. This is the standard meaning, derived from Kant.
+</item>
+        <item>Sigmund Freud, an Austrian psychiatrist and thinker, has developed many theories on the human subjectivity and founded the psychoanalysis method. Freud explored the unconscious, still poorly known in the late nineteenth century and early twentieth centuries….
+</item>
+        <item>Kant and the rejection of the dogmatic metaphysics Kant’s project in the metaphysics branch holds in one sentence: breaking with dogmatism. To achieve this goal, Kant questions the human reason, its status and limitations. In a word, the metaphysical question is: what am I able to know? How can we really know?
+</item>
+        <item>Leibniz defines the monad as a simple substance, without a party. The existence of compound bodies proves the existence of monads, since the existence of the compound proves the existence of simple. Thus, “what are the true atoms of nature” What may look like the parts absolutely simple, monads?
+</item>
+        <item> Nietzsche : God is dead “God is dead” is often how Nietzsche’s philosophy is summarized. Let’s try a bit to see its origin and its consequences. The projet of Nietzsche is to “overturn the table of values,” to think the man from himself, and not anymore from God. This quote is from the work Also Sprach …
+</item>
+        <item> Hegel, the philosopher of the System Hegel is a German philosopher who built a vast system ordering all knowledge of his time. Among his main works: – The Phenomenology of Spirit (1807) – Philosophical Propaedeutics (1809-1816) – Science of Logic (1812-1816) – Handbook of the Encyclopaedia of Philosophical Sciences (1817)
+</item>
+        <item>The existentialist philosophy of Soëren Kierkegaard Among the essential works of Kierkegaard, the Danish existentialist philosopher wrote : – The Alternative (1843) – Fear and Trembling (1843) – The Concept of Anxiety(1844) – Concluding Unscientific Postscript to Philosophical Fragments (1846)
+    </item>
+        <item>In Being and Time, Martin Heidegger described man (being) as being-for-death, i.e his ultimate project. Introduction to the Dasein structure by Heidegger To understand Heidegger’s reflection on being-for-death (Sein zum Tode), this theory should be put in the basic analytic of this philosopher, and his understanding of being by redefining concepts that we will be useful later for
+</item>
+        <item>Brentano’s main added value consists in bringing the doctrine of intentionnality in the philosophicla system. Brentano’s intentionnalityhas distinguished and characterized mental events as “the direction of the mind to an object” in perception, judgement or belief and approval or disapproval. This theory has clearly influenced Edmund Husserl, the founder of the phenomenology.
+</item>
+        <item>The quote “Religion is the opium of the people” is one of the most famous phrases of Karl Marx, also became the moto against religion and Christianity in general. The Religion according to Marx Religion according to Marx has several dimensions: – Religion is a bourgeois concept – Religion is a form of alienation -…
+</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
