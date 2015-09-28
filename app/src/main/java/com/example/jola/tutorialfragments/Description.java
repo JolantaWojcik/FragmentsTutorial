@@ -15,20 +15,11 @@ import android.widget.TextView;
 public class Description extends Fragment {
 
     private TextView textView;
-    private int mIndex = -1;
     private int arrayLength;
     private static final String TAG = "Description";
 
-    public int getIndex(){
-        return mIndex;
-    }
-
-    public void showItemAtIndex(int newIndex){
-        if(newIndex < 0 || newIndex >= arrayLength){
-            return;
-        }
-        mIndex = newIndex;
-        textView.setText(MainActivity.descriptionArray[mIndex]);
+    public int getShownIndex() {
+        return getArguments().getInt("index", 0);
     }
 
     @Override
@@ -39,14 +30,16 @@ public class Description extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_description, container, false);
+        View view = inflater.inflate(R.layout.fragment_description, container, false);
+        textView = (TextView) view.findViewById(R.id.desc);
+        textView.setText(MainActivity.descriptionArray[getShownIndex()]);
+        return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
+        Log.i(TAG, getClass().getSimpleName() + "onActivityCreated()");
         super.onActivityCreated(savedInstanceState);
-        textView = (TextView) getActivity().findViewById(R.id.desc);
-        arrayLength = MainActivity.descriptionArray.length;
     }
 
     //makes the fragment visible to the user (based on its containing activity being started)
