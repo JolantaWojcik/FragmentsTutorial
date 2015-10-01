@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TutorialFragments</string>
+    <string name="app_name">Tutorial Fragments</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -41,6 +41,6 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_details">DetailsActivity</string>
-    <string name="title_activity_description">DescriptionActivity</string>
+    <string name="title_activity_details">Details Activity</string>
+    <string name="title_activity_description">Description Activity</string>
 </resources>

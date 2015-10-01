@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     /*
     -> The back stack allows the user to reverse a fragment transaction (navigate backwards), by pressing the Back button.

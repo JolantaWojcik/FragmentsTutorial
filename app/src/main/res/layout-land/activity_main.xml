@@ -6,16 +6,14 @@
 
     <fragment
         android:id="@+id/titles"
-        android:layout_width="0px"
+        android:layout_width="250dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         class="com.example.jola.tutorialfragments.PhilosophName" />
 
     <FrameLayout
         android:id="@+id/details"
-        android:layout_width="0px"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="?android:attr/detailsElementBackground" />
+        android:background="?android:attr/detailsElementBackground"></FrameLayout>
 
 </LinearLayout>

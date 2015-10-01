@@ -26,7 +26,6 @@ public class PhilosophName extends ListFragment {
 
     public static final String TAG = "PhilosophName";
     private ListSelcetionListener mListener;
- //   private int mIndex = -1;
 
     boolean mDualPane;
     int mIndex = 0;
@@ -82,6 +81,7 @@ public class PhilosophName extends ListFragment {
         // This is first created when the phone is switched to landscape
         // mode
         View detailsLandMode = getActivity().findViewById(R.id.details);
+        mDualPane = detailsLandMode != null && detailsLandMode.getVisibility() == View.VISIBLE;
 
         if (savedInstanceState != null) {
             // Restore last state for checked position.
@@ -89,16 +89,24 @@ public class PhilosophName extends ListFragment {
         }
 
         if (mDualPane) {
-            // the list view highlights the selected item.
+            // In dual-pane mode, the list view highlights the selected item.
             getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
             // Make sure our UI is in the correct state.
             showDetails(mIndex);
-        } else {
-            // the list view highlights the selected item.
-            getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-            getListView().setItemChecked(mIndex, true);
         }
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("curChoice", mIndex);
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        showDetails(position);
+    }
+
 
     private void showDetails(int index) {
         mIndex = index;
@@ -121,11 +129,11 @@ public class PhilosophName extends ListFragment {
                     .findFragmentById(R.id.details);
             if (description == null || description.getShownIndex() != index) {
                 // Make new fragment to show this selection.
-               // description = Description.newInstance(index);
+                description = Description.newInstance(index);
+
                 // Execute a transaction, replacing any existing fragment
                 // with this one inside the frame.
-                FragmentTransaction ft = getFragmentManager()
-                        .beginTransaction();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.details, description);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 ft.commit();
@@ -151,20 +159,4 @@ public class PhilosophName extends ListFragment {
             startActivity(intent);
         }
     }
-/*
-    @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-        super.onListItemClick(l, v, position, id);
-        if(mIndex != position){
-            mIndex = position;
-            mListener.onListSelection(position);
-        }
-    }
-
-    //called immediately prior to the fragment no longer being associated with its activity
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }*/
 }

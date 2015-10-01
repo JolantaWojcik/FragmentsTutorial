@@ -18,10 +18,6 @@ public class Description extends Fragment {
     private int arrayLength;
     private static final String TAG = "Description";
 
-    public int getShownIndex() {
-        return getArguments().getInt("index", 0);
-    }
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -54,5 +50,19 @@ public class Description extends Fragment {
     public void onResume() {
         Log.i(TAG, getClass().getSimpleName() + "onResume()");
         super.onResume();
+    }
+
+    public static Description newInstance(int index) {
+        Description d = new Description();
+        // Supply index input as an argument.
+        Bundle args = new Bundle();
+        args.putInt("index", index);
+        d.setArguments(args);
+
+        return d;
+    }
+
+    public int getShownIndex() {
+        return getArguments().getInt("index", 0);
     }
 }
